@@ -1,8 +1,69 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import React, { useState } from 'react'
 import styles from '../styles/Home.module.css'
+import profilePicture from '../images/cat_profile.jpg'
+import pythonLogo from '../images/python-logo.svg'
+import jsLogo from '../images/js-logo.svg'
+import ghLogo from '../images/social/github.svg'
+import lcLogo from '../images/social/leetcode.svg'
+import linkedinLogo from '../images/social/linkedin.svg'
+import arrowIcon from '../images/arrow-up.svg'
 
+import {
+  Image,
+  Flex,
+  Box,
+  Container,
+  Divider,
+  Button,
+  Collapse,
+  Link,
+  Text,
+  Heading
+  } from '@chakra-ui/react'
+
+function HighlightText({children}) {
+  return (
+    <Text as="span" fontWeight="bold" bg='rgba(48, 105, 152, 0.2)'>
+      {children}
+    </Text>
+  )
+}
+console.log(profilePicture)
 export default function Home() {
+  const [ state, setState ] = React.useState({
+    initialOpen: true,
+    pythonOpen: false,
+    javascriptOpen: false,
+    othersOpen: false,
+  });
+
+  const offState = {
+    initialOpen: false,
+    pythonOpen: false,
+    javascriptOpen: false,
+    othersOpen: false,
+  }
+
+  function allOff(){
+    setState(offState)
+  }
+
+  const toggleCollapse = (collapseBool) => {
+      if (state[collapseBool] === true) {
+        setState({
+          ...offState,
+          initialOpen: true
+        })
+      } else {
+        setState({
+          ...offState,
+          [collapseBool]: true
+        })
+      }
+    }
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,61 +72,161 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Container // Chakra container, defaults to a maxWidth of 60ch
+      display="flex"
+      p={2}
+      wrap="wrap"
+      align="center"
+      justifyContent="space-between"
+      maxW="80ch"
+      >
 
+      <main className={styles.main}>
+        <br></br>
+        <Flex mt="200px" alignItems="center" justifyContent="center">
+          <Heading mr="40px">
+              Hi, I&apos;m Stephen
+          </Heading>
+          <Image src={ profilePicture.src} alt="profile picture" borderRadius='full' boxSize='150px'></Image>
+        </Flex>
+        <br></br>
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          I&apos;m an aspiring developer that likes playing with fractals and algorithms.
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <p className={styles.description}>
+          I use <Link
+            color='rgba(48, 105, 152)'
+            fontWeight="bold"
+            bg='rgba(48, 105, 152, 0.2)'
+            rounded='md'
+            shadow='md'
+            onClick={() => toggleCollapse('pythonOpen')}
+          >Python</Link>
+          , <Link
+          color='rgba(181, 164, 24)'
+          fontWeight="bold"
+          bg='rgba(181, 164, 24, 0.1)'
+          rounded='md'
+          shadow='md'
+          onClick={() => toggleCollapse('javascriptOpen')}
+          >Javascript</Link>, and some <Link
+          color='rgb(0,139,139)'
+          fontWeight="bold"
+          bg='rgba(0,139,139, 0.1)'
+          rounded='md'
+          shadow='md'
+          onClick={() => toggleCollapse('othersOpen')}
+          >other things.</Link>
+        </p>
+        <Collapse in={state.initialOpen} animateOpacity={true} >
+        <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> Click on the languages to see what I&apos;ve been working on.
+        </Collapse>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
+        <Collapse in={state.pythonOpen} animateOpacity={true} >
+          <Box
+            p='10px'
+            mt='4'
+            bg='rgba(48, 105, 152, 0.1)'
+            // border='40px'
+            // borderColor='#306998'
+            rounded='md'
+            shadow='md'
+            textAlign='left'
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            <Flex justifyContent="center" mb="1rem">
+              <Image src={ pythonLogo.src} alt="python icon" boxSize='40px' mr="10px"></Image>
+              <Text fontSize="2xl" fontWeight="Bold">Python</Text>
+            </Flex>
+            <Text fontSize='xl'>Python is my main language for making <HighlightText>quick scripts</HighlightText>.</Text>
+            <br></br>
+            <Text fontSize='xl'>I&apos;ve also used it to make <HighlightText>web
+              backends</HighlightText> using <Link fontWeight="bold"
+              href="https://flask.palletsprojects.com/en/2.2.x/">Flask</Link> and <Link fontWeight="bold"
+              href="https://www.djangoproject.com/">Django</Link>. </Text>
+            <br></br>
+            <Text fontSize='xl'>I&apos;m currently exploring <HighlightText>natural language
+              processing</HighlightText> with Python using <Text
+              as="span" fontWeight="bold">nltk</Text>, <Text
+              as="span" fontWeight="bold">word2vec</Text> and <Text
+              as="span" fontWeight="bold">TensorFlow</Text>. </Text>
+          </Box>
+        </Collapse>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
+        <Collapse in={state["javascriptOpen"]} animateOpacity>
+        <Box
+            p='10px'
+            mt='4'
+            bg='rgba(247,223,30, 0.1)'
+            // border='40px'
+            // borderColor='#306998'
+            rounded='md'
+            shadow='md'
+            textAlign='left'
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            <Flex justifyContent="center" mb="1rem">
+              <Image src={ jsLogo.src} alt="js icon" boxSize='40px' borderRadius="20%" mr="10px"></Image>
+              <Text fontSize="2xl" fontWeight="Bold">Javascript</Text>
+            </Flex>
+            <Text fontSize='xl'>I use Javascript for <HighlightText>web frontends</HighlightText> and
+            creating <HighlightText>user interfaces</HighlightText>.</Text>
+            <br></br>
+            <Text fontSize='xl'>
+            I also use it to make <HighlightText>fractals</HighlightText> - like the one that
+            you&apos;re seeing in the background right now! </Text>
+            <br></br>
+            <Text fontSize='xl'>Currently learning <Link fontWeight="bold"
+              href="https://reactjs.org/">React</Link>/<Link fontWeight="bold"
+              href="https://nextjs.org/">Next.js</Link>, which I&apos;ve started to incorporate into my personal projects.</Text>
+          </Box>
+        </Collapse>
+
+        <Collapse in={state["othersOpen"]} animateOpacity>
+          <Box
+            p='10px'
+            mt='4'
+            bg='rgba(0,139,139, 0.1)'
+            // border='40px'
+            // borderColor='#306998'
+            rounded='md'
+            shadow='md'
+            textAlign='left'
+          >
+            <Flex justifyContent="center" mb="1.5rem">
+              <Text as="u" fontSize="2xl" fontWeight="Bold">Other skills</Text>
+            </Flex>
+            <Text fontSize='xl'>I&apos;m currently learning <HighlightText>Ruby on
+            Rails</HighlightText> at a Web Development Bootcamp. </Text>
+            <br></br>
+            <Text fontSize='xl'>I usually use <HighlightText>AWS</HighlightText> for deployment, and I&apos;m
+            familiar with Amazon DynamoDB as well as the Amazon SDK for Python, Boto3.</Text>
+            <br></br>
+            <Text fontSize='xl'>I&apos;ve also learnt a bit of
+            both <HighlightText>C</HighlightText> and <HighlightText>SQL</HighlightText> in the past, though
+            I&apos;m far from proficient in either language.</Text>
+          </Box>
+        </Collapse>
+
+        <br></br>
+        <p className={styles.description} >
+          I&apos;m also currently a practicing dentist in Melbourne, Australia.
+        </p>
+
+        <Divider m="30px" />
+        <Heading>Find me on: </Heading>
+        <Flex justifyContent="center">
+          <Link href="https://leetcode.com/stephen-w-choo/">
+            <Image src={ lcLogo.src} alt="leetcode icon" boxSize='40px' m="20px"></Image>
+          </Link>
+          <Link href="https://github.com/stephen-w-choo/">
+            <Image src={ ghLogo.src} alt="github icon" boxSize='40px' m="20px"></Image>
+          </Link>
+          <Link href="https://www.linkedin.com/in/stephen-choo-b130b3238/">
+            <Image src={ linkedinLogo.src} alt="linkedin icon" boxSize='40px' m="20px"></Image>
+          </Link>
+        </Flex>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      </Container>
     </div>
   )
 }
