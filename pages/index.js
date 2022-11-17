@@ -91,7 +91,10 @@ export default function Home() {
         </Flex>
         <br></br>
         <p className={styles.description}>
-          I&apos;m an aspiring developer that likes playing with fractals and algorithms.
+          I&apos;m an aspiring developer that likes playing with fractals and <Link
+          href="https://leetcode.com/stephen-w-choo/"
+          fontWeight="bold">
+            algorithms.</Link>
         </p>
 
         <p className={styles.description}>
@@ -209,7 +212,7 @@ export default function Home() {
 
         <br></br>
         <p className={styles.description} >
-          I&apos;m also a practicing 🦷dentist🦷 in Melbourne, Australia.
+          I&apos;m also a practicing dentist🦷 in Melbourne, Australia.
         </p>
 
         <Divider/>
