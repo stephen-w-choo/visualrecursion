@@ -104,7 +104,7 @@ export default function Home() {
           mb="20px"
           >
           <Text fontSize="xl">
-            I&apos;m an aspiring developer who likes fractals and <Link
+            I&apos;m an aspiring developer who likes to play with fractals and do <Link
             href="https://leetcode.com/stephen-w-choo/"
             fontWeight="bold">
               algorithmic challenges.</Link>
@@ -260,7 +260,6 @@ export default function Home() {
 
         </p>
 
-        <Divider />
         <Heading fontSize="lg">Find me on: </Heading>
         <Flex justifyContent="center">
           <Link href="https://leetcode.com/stephen-w-choo/">
