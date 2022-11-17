@@ -5,24 +5,23 @@ import { AnimatePresence } from 'framer-motion'
 
 console.log(AnimatePresence)
 function MyApp({ Component, pageProps }) {
-  return (        <AnimatePresence
-    exitBeforeEnter
-    initial={true}
-    onExitComplete={() => {
-      if (typeof window !== 'undefined') {
-        window.scrollTo({ top: 0 })
-      }
-    }}
-  >
+  return (
     <ChakraProvider>
       <div id="wrapper">
         <Navbar />
-
+        {/* <AnimatePresence
+          mode='wait'
+          initial={true}
+          onExitComplete={() => {
+            if (typeof window !== 'undefined') {
+              window.scrollTo({ top: 0 })
+            }
+          }}
+        > */}
           <Component {...pageProps} />
-
+        {/* </AnimatePresence> */}
       </div>
     </ChakraProvider>
-    </AnimatePresence>
   )
 }
 
