@@ -8,11 +8,6 @@ import {
   Stack,
   Heading,
   Flex,
-  Menu,
-  MenuItem,
-  MenuButton,
-  IconButton,
-  useColorModeValue
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
@@ -48,7 +43,7 @@ function Navbar(props) {
     position="fixed"
     as="nav"
     w="100%"
-    bg = 'white40' // white transparent background? I think?
+    bg = 'rgba(255, 255, 255, 0.5)' // white transparent background? I think?
     style={{backdropFilter:'blur(10px)'}} // blureffect
     zIndex={1}
     {...props}
@@ -59,9 +54,10 @@ function Navbar(props) {
       wrap="wrap"
       align="center"
       justifyContent="space-between"
+      maxW="80ch"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+          <Heading as="h1" size="lg" fontFamily="VarelaRound">
             <LinkItem href="/" path={path}>
               Stephen Choo
             </LinkItem>

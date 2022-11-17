@@ -83,11 +83,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <br></br>
-        <Flex mt="200px" alignItems="center" justifyContent="center">
-          <Heading mr="40px">
+        <Flex mt="180px" alignItems="center" justifyContent="center">
+          <Heading size="lg" mr="40px" fontFamily="VarelaRound" fontWeight="700">
               Hi, I&apos;m Stephen
           </Heading>
-          <Image src={ profilePicture.src} alt="profile picture" borderRadius='full' boxSize='150px'></Image>
+          <Image src={ profilePicture.src} alt="profile picture" borderRadius='full' boxSize='120px'></Image>
         </Flex>
         <br></br>
         <p className={styles.description}>
@@ -138,14 +138,14 @@ export default function Home() {
               <Image src={ pythonLogo.src} alt="python icon" boxSize='40px' mr="10px"></Image>
               <Text fontSize="2xl" fontWeight="Bold">Python</Text>
             </Flex>
-            <Text fontSize='xl'>Python is my main language for making <HighlightText>quick scripts</HighlightText>.</Text>
+            <Text fontSize='lg'>Python is my main language for making <HighlightText>quick scripts</HighlightText>.</Text>
             <br></br>
-            <Text fontSize='xl'>I&apos;ve also used it to make <HighlightText>web
+            <Text fontSize='lg'>I&apos;ve also used it to make <HighlightText>web
               backends</HighlightText> using <Link fontWeight="bold"
               href="https://flask.palletsprojects.com/en/2.2.x/">Flask</Link> and <Link fontWeight="bold"
               href="https://www.djangoproject.com/">Django</Link>. </Text>
             <br></br>
-            <Text fontSize='xl'>I&apos;m currently exploring <HighlightText>natural language
+            <Text fontSize='lg'>I&apos;m currently exploring <HighlightText>natural language
               processing</HighlightText> with Python using <Text
               as="span" fontWeight="bold">nltk</Text>, <Text
               as="span" fontWeight="bold">word2vec</Text> and <Text
@@ -168,14 +168,14 @@ export default function Home() {
               <Image src={ jsLogo.src} alt="js icon" boxSize='40px' borderRadius="20%" mr="10px"></Image>
               <Text fontSize="2xl" fontWeight="Bold">Javascript</Text>
             </Flex>
-            <Text fontSize='xl'>I use Javascript for <HighlightText>web frontends</HighlightText> and
+            <Text fontSize='lg'>I use Javascript for <HighlightText>web frontends</HighlightText> and
             creating <HighlightText>user interfaces</HighlightText>.</Text>
             <br></br>
-            <Text fontSize='xl'>
+            <Text fontSize='lg'>
             I also use it to make <HighlightText>fractals</HighlightText> - like the one that
             you&apos;re seeing in the background right now! </Text>
             <br></br>
-            <Text fontSize='xl'>Currently learning <Link fontWeight="bold"
+            <Text fontSize='lg'>Currently learning <Link fontWeight="bold"
               href="https://reactjs.org/">React</Link>/<Link fontWeight="bold"
               href="https://nextjs.org/">Next.js</Link>, which I&apos;ve started to incorporate into my personal projects.</Text>
           </Box>
@@ -195,13 +195,13 @@ export default function Home() {
             <Flex justifyContent="center" mb="1.5rem">
               <Text as="u" fontSize="2xl" fontWeight="Bold">Other skills</Text>
             </Flex>
-            <Text fontSize='xl'>I&apos;m currently learning <HighlightText>Ruby on
+            <Text fontSize='lg'>I&apos;m currently learning <HighlightText>Ruby on
             Rails</HighlightText> at a Web Development Bootcamp. </Text>
             <br></br>
-            <Text fontSize='xl'>I usually use <HighlightText>AWS</HighlightText> for deployment, and I&apos;m
+            <Text fontSize='lg'>I usually use <HighlightText>AWS</HighlightText> for deployment, and I&apos;m
             familiar with Amazon DynamoDB as well as the Amazon SDK for Python, Boto3.</Text>
             <br></br>
-            <Text fontSize='xl'>I&apos;ve also learnt a bit of
+            <Text fontSize='lg'>I&apos;ve also learnt a bit of
             both <HighlightText>C</HighlightText> and <HighlightText>SQL</HighlightText> in the past, though
             I&apos;m far from proficient in either language.</Text>
           </Box>
@@ -209,10 +209,10 @@ export default function Home() {
 
         <br></br>
         <p className={styles.description} >
-          I&apos;m also currently a practicing dentist in Melbourne, Australia.
+          I&apos;m also a practicing 🦷dentist🦷 in Melbourne, Australia.
         </p>
 
-        <Divider m="30px" />
+        <Divider/>
         <Heading>Find me on: </Heading>
         <Flex justifyContent="center">
           <Link href="https://leetcode.com/stephen-w-choo/">

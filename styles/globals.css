@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'VarelaRound';
+  src: url('fonts/VarelaRound-Regular.ttf');
+}
+
 html,
 body {
   padding: 0;
