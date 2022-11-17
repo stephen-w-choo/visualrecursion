@@ -47,7 +47,7 @@ export default function Home() {
         In the meantime, here is a very rough list of some of the things I&apos;ve made. Feel free to click on the links and have a look:
       </Text>
       <UnorderedList fontSize="20px">
-        <ListItem mt="10px"> <Link href="https://markovtwitter.com/" fontWeight="bold"> Twitter Caricatures - fake tweet generator </Link></ListItem>
+        <ListItem mt="10px"> <Link href="http://markov-twitter.com" fontWeight="bold"> Twitter Caricatures - fake tweet generator </Link></ListItem>
         <Text> My most recent project. A website that lets you
           generate plausible tweets for a given Twitter account using Markov chaining.</Text>
         <Text>
