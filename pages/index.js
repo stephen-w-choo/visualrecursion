@@ -104,7 +104,9 @@ export default function Home() {
           mb="20px"
           >
           <Text fontSize="xl">
-            I&apos;m an aspiring developer who enjoys making fractals and solving <Link
+            I&apos;m an aspiring developer who enjoys  <Link
+            href="http://www.playingwithchaos.net/"
+            fontWeight="bold">making fractals</Link> and solving <Link
             href="https://leetcode.com/stephen-w-choo/"
             fontWeight="bold">
               algorithmic challenges.</Link>
