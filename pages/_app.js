@@ -3,7 +3,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
 import { AnimatePresence } from 'framer-motion'
 
-console.log(AnimatePresence)
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>

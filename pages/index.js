@@ -103,7 +103,7 @@ export default function Home() {
           textAlign='left'
           mb="20px"
           >
-          <Text fontSize="xl">
+          <Text fontSize="lg">
             I&apos;m an aspiring developer who enjoys  <Link
             href="http://www.playingwithchaos.net/"
             fontWeight="bold">making fractals</Link> and solving <Link
@@ -112,7 +112,7 @@ export default function Home() {
               algorithmic challenges.</Link>
           </Text>
           <br></br>
-          <Text fontSize="xl">When I&apos;m not online or writing code, you can
+          <Text fontSize="lg">When I&apos;m not online, you can
               find me as a practicing dentist🦷 in Melbourne, Australia.
           </Text>
         </Box>
