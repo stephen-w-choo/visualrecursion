@@ -21,13 +21,12 @@ const NavbarStyle = styled.span`
   padding: 10px;
 `
 function LinkItem({href, path, children}){
-  const active = path === href
-  const inactiveColor = 'gray200'
   return (
     <NextLink href= {href}>
       <Link
         p={2} //padding value
         fontWeight="bold"
+        fontFamily="VarelaRound"
       >
         {children}
       </Link>
@@ -56,13 +55,11 @@ function Navbar(props) {
       justifyContent="space-between"
       maxW="80ch"
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" fontFamily="VarelaRound">
-            <LinkItem href="/" path={path}>
+          <Heading size="lg" fontFamily="VarelaRound">
+            <LinkItem href="/" path={path} p={2}>
               Stephen Choo
             </LinkItem>
           </Heading>
-        </Flex>
         <Stack
         direction='row'
         display='flex'

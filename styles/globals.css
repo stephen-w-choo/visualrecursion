@@ -9,18 +9,18 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(252, 247, 233);
 }
 
 .chakra-ui-light {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(252, 247, 233);
 }
 
 #wrapper {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-image: url(myCanvas3.jpg);
+  background-image: url(bg-transparent.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 800px;

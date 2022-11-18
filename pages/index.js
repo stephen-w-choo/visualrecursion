@@ -95,7 +95,7 @@ export default function Home() {
         <Box
           p='10px'
           mt='4'
-          bg='rgba(0, 0, 0, 0.05)'
+          bg='rgba(240, 232, 205)'
           // border='40px'
           // borderColor='#306998'
           rounded='md'
@@ -104,7 +104,7 @@ export default function Home() {
           mb="20px"
           >
           <Text fontSize="xl">
-            I&apos;m an aspiring developer who likes to play with fractals and do <Link
+            I&apos;m an aspiring developer who enjoys making fractals and doing <Link
             href="https://leetcode.com/stephen-w-choo/"
             fontWeight="bold">
               algorithmic challenges.</Link>
@@ -122,6 +122,7 @@ export default function Home() {
             bg='rgba(48, 105, 152, 0.2)'
             rounded='md'
             shadow='md'
+            padding='5px'
             onClick={() => toggleCollapse('pythonOpen')}
           >Python</Link>
           , <Link
@@ -130,6 +131,7 @@ export default function Home() {
           bg='rgba(181, 164, 24, 0.1)'
           rounded='md'
           shadow='md'
+          padding='5px'
           onClick={() => toggleCollapse('javascriptOpen')}
           >Javascript</Link>, <Link
           color='rgba(169, 20, 1)'
@@ -137,6 +139,7 @@ export default function Home() {
           bg='rgba(169, 20, 1, 0.1)'
           rounded='md'
           shadow='md'
+          padding='5px'
           onClick={() => toggleCollapse('rubyOpen')}
           >Ruby</Link>
           , and <Link
@@ -145,12 +148,13 @@ export default function Home() {
           bg='rgba(0,139,139, 0.1)'
           rounded='md'
           shadow='md'
+          padding='5px'
           onClick={() => toggleCollapse('othersOpen')}
           >others</Link>.
         </p>
         <Collapse in={state.initialOpen} animateOpacity={true}>
         <Box mb="50px">
-          <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> Click on the languages to see what I&apos;ve been working on.
+          <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> <Text as="span" fontWeight="600" fontSize="lg">Click to see what I&apos;ve been working on.</Text>
         </Box>
         </Collapse>
 
