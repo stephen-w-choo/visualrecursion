@@ -1,24 +1,23 @@
 import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import Navbar from '../components/navbar'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
-function MyApp({ Component, pageProps }) {
+
+
+
+function MyApp({ Component, pageProps, router }) {
   return (
     <ChakraProvider>
       <div id="wrapper">
-        <Navbar />
-        {/* <AnimatePresence
-          mode='wait'
-          initial={true}
-          onExitComplete={() => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: 0 })
-            }
-          }}
-        > */}
-          <Component {...pageProps} />
-        {/* </AnimatePresence> */}
+      <Navbar path={router.asPath}/>
+        <AnimatePresence
+            mode='wait'
+            initial={true}
+          >
+
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </div>
     </ChakraProvider>
   )

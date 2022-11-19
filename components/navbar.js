@@ -22,11 +22,12 @@ const NavbarStyle = styled.span`
 `
 function LinkItem({href, path, children}){
   return (
-    <NextLink href= {href}>
+    <NextLink href= {href} path = {path} scroll={false}>
       <Link
         p={2} //padding value
         fontWeight="bold"
         fontFamily="VarelaRound"
+        scroll={false}
       >
         {children}
       </Link>
@@ -69,7 +70,7 @@ function Navbar(props) {
         flexGrow={1}
         mt='0'
         >
-          <LinkItem href="/wip" path={path}>
+          <LinkItem href="/wip" path={path} >
             Projects
           </LinkItem>
         </Stack>

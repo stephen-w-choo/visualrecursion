@@ -20,9 +20,7 @@ import {
   } from '@chakra-ui/react'
 
 
-export default function Home() {
-
-
+export default function wip() {
 
   return (
     <div className={styles.container}>
