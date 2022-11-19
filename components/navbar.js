@@ -72,9 +72,6 @@ function Navbar(props) {
           <LinkItem href="/wip" path={path}>
             Projects
           </LinkItem>
-          <LinkItem href="/wip" path={path}>
-            Contact
-          </LinkItem>
         </Stack>
       </Container>
     </Box>

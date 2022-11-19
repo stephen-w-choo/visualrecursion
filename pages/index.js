@@ -72,6 +72,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Stephen Choo - Homepage</title>
+        <link rel="icon" href="../public/favicon.png"></link>
       </Head>
 
       <Container // Chakra container, defaults to a maxWidth of 60ch
