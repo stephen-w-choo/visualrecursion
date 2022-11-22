@@ -75,7 +75,7 @@ export default function Home() {
         <Flex mt="130px" alignItems="center" justifyContent="center">
           <Box>
             <Heading size="lg" mr="40px" fontFamily="VarelaRound" fontWeight="700">
-                Hi, I'm Stephen
+                Hi, I&apos;m Stephen
             </Heading>
           </Box>
           <Image src={ profilePicture.src} alt="profile picture" borderRadius='full' boxSize='120px'></Image>
