@@ -2,7 +2,8 @@
 import React from 'react'
 import LinkItem from '../linkitem'
 import { motion } from 'framer-motion'
-import logo from '../../images/logos/gosper.png'
+import logo from '../../images/logos/websiteLogo.png'
+import menuIcon from '../../images/menu-icon.svg'
 
 import {
   Button,
@@ -43,9 +44,8 @@ function NavDrawer() {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme='teal' onClick={onOpen} height="40px">
-        Menu
-      </Button>
+      <Image ref={btnRef} onClick={onOpen} display="inline" src={ menuIcon.src} alt="logo" boxSize="30px" mr="10px"></Image>
+
       <Drawer
         isOpen={isOpen}
         placement='right'
@@ -111,11 +111,17 @@ function Navbar(props) {
       wrap="wrap"
       align="center"
       justifyContent="space-between"
-      maxW="80ch"
+      maxW="100ch"
       >
 
         {/* <LinkItem href="/" path={path} > */}
-        <Image display="inline" src={ logo.src} alt="logo" borderRadius='full' boxSize='50px' m="0px" opacity="0.5"></Image>
+      <Flex
+      justifyContent="space-between"
+      width="100%"
+      alignItems="center"
+      >
+        <Image display="inline" src={ logo.src} alt="logo" boxSize='50px' mr="10px"></Image>
+        <Heading fontFamily="VarelaRound" fontSize="2xl">Stephen Choo</Heading>
           {/* <Flex justify="center" alignItems="center" m="0px"> */}
             {/* <motion.div
               initial={{ opacity: 0 }}
@@ -156,13 +162,10 @@ function Navbar(props) {
         </Stack>) }
 
         {!matches && (
-        <Flex
-        justifyContent="flex-end"
-        width="100%"
-        >
-          <NavDrawer />
-        </Flex>) }
 
+          <NavDrawer />
+        ) }
+        </Flex>
       </Container>
     </Box>
 
