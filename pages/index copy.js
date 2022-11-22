@@ -74,9 +74,10 @@ export default function Home() {
       <main className={styles.main}>
         <Flex mt="130px" alignItems="center" justifyContent="center">
           <Box>
-            <Heading size="lg" mr="40px" fontFamily="VarelaRound" fontWeight="700">
-                Hi, I'm Stephen
+            <Heading size="lg" mr="40px" fontFamily="VarelaRound" fontWeight="700" >
+                Hi, I&apos;m Stephen
             </Heading>
+
           </Box>
           <Image src={ profilePicture.src} alt="profile picture" borderRadius='full' boxSize='120px'></Image>
         </Flex>
@@ -131,7 +132,7 @@ export default function Home() {
           shadow='md'
           padding='5px'
           onClick={() => toggleCollapse('rubyOpen')}
-          >Rails</Link>
+          >Ruby</Link>
           , and <Link
           color='rgba(0,139,139)'
           fontWeight="bold"
@@ -144,7 +145,7 @@ export default function Home() {
         </p>
         <Collapse in={state.initialOpen} animateOpacity={true}>
         <Box mb="50px">
-          <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> <Text as="span" fontWeight="600" fontSize="lg">Click to see more.</Text>
+          <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> <Text as="span" fontWeight="600" fontSize="lg">Click to see what I&apos;ve been working on.</Text>
         </Box>
         </Collapse>
         <Collapse in={state.pythonOpen} animateOpacity={true} >
@@ -216,7 +217,7 @@ export default function Home() {
             >
               <Flex justifyContent="center" mb="1rem">
                 <Image src={ rubyLogo.src } alt="js icon" boxSize='40px' borderRadius="20%" mr="10px"></Image>
-                <Text fontSize="2xl" fontWeight="Bold">Rails</Text>
+                <Text fontSize="2xl" fontWeight="Bold">Ruby</Text>
               </Flex>
               <Text fontSize='lg'>I&apos;m currently learning the <HighlightText>Ruby on
               Rails</HighlightText> ecosystem (ActiveRecord, StimulusJS etc.) at a Web Development Bootcamp.</Text>

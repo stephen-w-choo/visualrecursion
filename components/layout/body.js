@@ -1,4 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
+import {
+  Container,
+  } from '@chakra-ui/react'
 
 
 const variants = {
@@ -9,7 +12,7 @@ const variants = {
 
 function Body({ children }) {
   return (
-    <motion.article
+    <motion.div
     initial="hidden"
     animate="enter"
     exit="exit"
@@ -17,8 +20,17 @@ function Body({ children }) {
     transition={{ duration: 0.4, type: 'easeInOut' }}
     style={{ position: 'relative' }}
     >
-      {children}
-    </motion.article>
+      <Container // Chakra container, defaults to a maxWidth of 60ch
+      display="flex"
+      p={2}
+      wrap="wrap"
+      align="center"
+      justifyContent="space-between"
+      maxW="70ch"
+      >
+        {children}
+      </Container>
+    </motion.div>
   );
 }
 

@@ -24,6 +24,14 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 800px;
+  position:relative;
+}
+
+#openingAnimation {
+  position: relative;
+  height: 0;
+  overflow: visible;
+  z-index: 1;
 }
 
 a {
