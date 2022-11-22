@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react'
 import Body from 'layout/body'
 
-export default function GridItem({children, ...props, image, title, description, href}){
+export default function GridItem({children, image, title, description, href, ...props}){
   return (
     <Body>
       <NextLink href={href}>
