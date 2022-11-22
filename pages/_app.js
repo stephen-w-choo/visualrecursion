@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps, router }) {
           transition={{ delay: 0, duration: 2.5, type: 'easeInOut' }}
           style={{ position: 'absolute', top:"200px"}}
           >
-          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
           <motion.path
             d="M534 1835 c-15 -23 -15 -27 0 -50 16 -24 20 -25 125 -25 l109 0 30
             -55 30 -54 -87 -3 -86 -3 -81 -152 c-45 -84 -79 -155 -76 -158 3 -3 128 -5
@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps, router }) {
             -142 0 -143 0 -56 -104 -55 -103 -148 -7 c-81 -4 -157 -4 -169 1 l-22 8 29 53
             30 52 135 0 c74 0 135 3 135 8 0 4 -36 72 -79 152 l-78 145 -141 3 -141 3 -17
             -26z"
-            style={{ scale: 0.1, originX: "100px", originY: "100px" }}
+            style={{ scale: 0.08, originX: "100px", originY: "100px" }}
             fill="transparent"
             strokeWidth="12"
             stroke="rgba(0, 0, 0, 0.69)"
@@ -74,8 +74,8 @@ function MyApp({ Component, pageProps, router }) {
             transition={{ duration: 3, ease: "easeInOut" }}
           />
         </svg>
-            <Heading size="2xl" mr="40px" fontFamily="VarelaRound" fontWeight="700">
-                Loading...
+            <Heading size="2xl" mr="40px" fontFamily="VarelaRound" fontWeight="700" textAlign="center">
+                Loading
             </Heading>
           </motion.div>
       <Navbar path={router.asPath}/>
