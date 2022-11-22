@@ -85,7 +85,7 @@ export default function Home() {
           width="100%"
           textAlign="left"
           >
-          <Heading fontFamily="MontserratBold" fontSize="md"> ABOUT <Divider borderColor="blackAlpha.500" /></Heading>
+          <Heading fontFamily="MontserratBold" fontSize="md" mb="10px"> ABOUT <Divider borderColor="blackAlpha.500" /></Heading>
           <Text fontSize="lg">
             I&apos;m an aspiring developer who enjoys  <Link
             href="http://www.playingwithchaos.net/"
@@ -109,8 +109,8 @@ export default function Home() {
           textAlign="left"
           width="100%"
         >
-          <Heading fontFamily="MontserratBold" fontSize="md"> SKILLS <Divider borderColor="blackAlpha.500" /></Heading>
-          <p className={styles.description}>
+          <Heading fontFamily="MontserratBold" fontSize="md" mb="10px"> SKILLS <Divider borderColor="blackAlpha.500" /></Heading>
+          <Text fontSize="xl">
             I use <Link
               color='rgba(48, 105, 152)'
               fontWeight="bold"
@@ -146,7 +146,7 @@ export default function Home() {
             padding='5px'
             onClick={() => toggleCollapse('othersOpen')}
             >others</Link>.
-          </p>
+          </Text>
         </Box>
         <Collapse in={state.initialOpen} animateOpacity={true}>
         <Box mb="50px">
