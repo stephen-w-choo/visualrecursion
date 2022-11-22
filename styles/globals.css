@@ -3,6 +3,26 @@
   src: url('fonts/VarelaRound-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('fonts/Montserrat-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'MontserratBlack';
+  src: url('fonts/Montserrat-Black.ttf')
+}
+
+@font-face {
+  font-family: 'JosefinSansSemiBold';
+  src: url('fonts/JosefinSans-SemiBold.ttf')
+}
+
 html,
 body {
   padding: 0;

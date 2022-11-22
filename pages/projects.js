@@ -32,14 +32,12 @@ export default function Home() {
         >
           <GridItem
           image={MarkovTwitterIcon.src}
-          href="/projects/markovtwitter"
           title="Twitter Caricatures"
-          description="A web app that generates fake tweets using Markov chaining." />
-          <GridItem
-          image={VisualRecursionIcon.src}
-          href="/projects/visualrecursion"
-          title="Visual Recursion"
-          description="You're looking at it: my portfolio and eventual fractal arts showcase. \n Made with React/Next" />
+          description="A web app that generates fake tweets using Markov chaining."
+          github="https://github.com/stephen-w-choo/markov-twitter"
+          website="https://markovtwitter.com/"
+          tags={["Python", "Flask", "React", "AWS"]}
+          />
         </Flex>
         <Heading fontSize="2xl" fontFamily="VarelaRound">
           Coding Challenges
@@ -54,18 +52,29 @@ export default function Home() {
         >
           <GridItem
             image={GoogleFoobarIcon.src}
-            href="/projects/googlefoobar"
             title="Google Foobar"
-            description="Google's invitational coding challenge, which I successfully completed. Still the most fun I've had while writing code." />
+            description="Google's invitational coding challenge, which I successfully completed. Still the most fun I've had while writing code."
+            github="https://github.com/stephen-w-choo/google-foobar-solutions"
+            website="https://foobar.withgoogle.com/"
+            tags={["Python", "Data Structures and Algorithms"]} />
           <GridItem
             image={EYChallengeIcon.src}
-            href="/projects/eychallenge"
             title="EY Better Working World Challenge"
-            description="A data science challenge - one that I was not particularly succcessful in." />
+            description="A data science challenge - one that I was not particularly succcessful in."
+            github="https://github.com/stephen-w-choo/google-foobar-solutions"
+            website="https://foobar.withgoogle.com/"
+            tags={["Python", "Jupyter Notebook", "Some Azure"]} />
         </Flex>
         <Heading fontSize="2xl" fontFamily="VarelaRound">
           Older Projects
         </Heading>
+        <GridItem
+          image={VisualRecursionIcon.src}
+          href="/projects/visualrecursion"
+          title="Visual Recursion"
+          description="You're looking at it: my portfolio and eventual fractal arts showcase."
+          github="https://github.com/stephen-w-choo/markov-twitter"
+          tags={["React", "Next", "ChakraJS", "framer-motion", "AWS"]} />
         {/* <Flex
         width="100%"
         // gridTemplateColumns="repeat(auto-fill, 350px)"

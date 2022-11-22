@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps, router }) {
             // transitionEnd: {display: "none"}
           }}
           exit= {{ opacity: 0 }}
-          transition={{ delay: 0, duration: 2.5, type: 'easeInOut' }}
+          transition={{ delay: 0, duration: 2, type: 'easeInOut' }}
           style={{ position: 'absolute', top:"200px"}}
           >
           <motion.svg
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps, router }) {
             strokeLinecap="round"
             initial={{ pathLength: 0, translateX:120, translateY:120 }}
             animate={{ pathLength: 1}}
-            transition={{ duration: 2, ease: "easeInOut" }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
           />
         </motion.svg>
             <Heading size="2xl" mr="40px" fontFamily="VarelaRound" fontWeight="700" textAlign="center">
@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps, router }) {
         animate="enter"
         exit="exit"
         variants={variants}
-        transition={{ delay: 2.5, duration: 0.4, type: 'easeInOut' }}
+        transition={{ delay: 2, duration: 0.4, type: 'easeInOut' }}
         style={{ position: 'relative' }}
         >
 

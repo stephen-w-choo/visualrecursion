@@ -13,16 +13,16 @@ import arrowIcon from '../images/arrow-up.svg'
 import Body from '../components/layout/body'
 
 import {
-  Image,
-  Flex,
   Box,
-  Container,
-  Divider,
   Button,
   Collapse,
+  Container,
+  Divider,
+  Flex,
+  Heading,
+  Image,
   Link,
   Text,
-  Heading
   } from '@chakra-ui/react'
 
 function HighlightText({children}) {
@@ -82,12 +82,10 @@ export default function Home() {
         </Flex>
         <br></br>
         <Box
-          p='10px'
-          bg='rgba(240, 232, 205)'
-          rounded='md'
-          shadow='md'
-          textAlign='left'
+          width="100%"
+          textAlign="left"
           >
+          <Heading fontFamily="MontserratBold" fontSize="md"> ABOUT <Divider borderColor="blackAlpha.500" /></Heading>
           <Text fontSize="lg">
             I&apos;m an aspiring developer who enjoys  <Link
             href="http://www.playingwithchaos.net/"
@@ -101,43 +99,55 @@ export default function Home() {
               find me as a practicing dentist🦷 in Melbourne, Australia.
           </Text>
         </Box>
-        <p className={styles.description}>
-          I use <Link
-            color='rgba(48, 105, 152)'
+
+        <Box
+          // p='10px'
+          // bg='rgba(240, 232, 205)'
+          // rounded='md'
+          // shadow='md'
+          mt="50px"
+          textAlign="left"
+          width="100%"
+        >
+          <Heading fontFamily="MontserratBold" fontSize="md"> SKILLS <Divider borderColor="blackAlpha.500" /></Heading>
+          <p className={styles.description}>
+            I use <Link
+              color='rgba(48, 105, 152)'
+              fontWeight="bold"
+              bg='rgba(48, 105, 152, 0.2)'
+              rounded='md'
+              shadow='md'
+              padding='5px'
+              onClick={() => toggleCollapse('pythonOpen')}
+            >Python</Link>
+            , <Link
+            color='rgba(181, 164, 24)'
             fontWeight="bold"
-            bg='rgba(48, 105, 152, 0.2)'
+            bg='rgba(181, 164, 24, 0.1)'
             rounded='md'
             shadow='md'
             padding='5px'
-            onClick={() => toggleCollapse('pythonOpen')}
-          >Python</Link>
-          , <Link
-          color='rgba(181, 164, 24)'
-          fontWeight="bold"
-          bg='rgba(181, 164, 24, 0.1)'
-          rounded='md'
-          shadow='md'
-          padding='5px'
-          onClick={() => toggleCollapse('javascriptOpen')}
-          >Javascript</Link>, <Link
-          color='rgba(169, 20, 1)'
-          fontWeight="bold"
-          bg='rgba(169, 20, 1, 0.1)'
-          rounded='md'
-          shadow='md'
-          padding='5px'
-          onClick={() => toggleCollapse('rubyOpen')}
-          >Rails</Link>
-          , and <Link
-          color='rgba(0,139,139)'
-          fontWeight="bold"
-          bg='rgba(0,139,139, 0.1)'
-          rounded='md'
-          shadow='md'
-          padding='5px'
-          onClick={() => toggleCollapse('othersOpen')}
-          >others</Link>.
-        </p>
+            onClick={() => toggleCollapse('javascriptOpen')}
+            >Javascript</Link>, <Link
+            color='rgba(169, 20, 1)'
+            fontWeight="bold"
+            bg='rgba(169, 20, 1, 0.1)'
+            rounded='md'
+            shadow='md'
+            padding='5px'
+            onClick={() => toggleCollapse('rubyOpen')}
+            >Rails</Link>
+            , and <Link
+            color='rgba(0,139,139)'
+            fontWeight="bold"
+            bg='rgba(0,139,139, 0.1)'
+            rounded='md'
+            shadow='md'
+            padding='5px'
+            onClick={() => toggleCollapse('othersOpen')}
+            >others</Link>.
+          </p>
+        </Box>
         <Collapse in={state.initialOpen} animateOpacity={true}>
         <Box mb="50px">
           <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> <Text as="span" fontWeight="600" fontSize="lg">Click to see more.</Text>

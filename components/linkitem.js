@@ -11,8 +11,9 @@ export default function LinkItem({href, path, children}){
         mt="0px"
         mb="0px"
         mr="20px"
-        fontWeight="bold"
-        fontFamily="VarelaRound"
+        fontWeight="semibold"
+        letterSpacing="tight"
+        fontFamily="Montserrat"
         scroll={false}
         fontSize="lg"
       >

@@ -39,12 +39,12 @@ const NavbarStyle = styled.span`
 
 
 function NavDrawer() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
   const btnRef = React.useRef()
 
   return (
     <>
-      <Image ref={btnRef} onClick={onOpen} display="inline" src={ menuIcon.src} alt="logo" boxSize="30px" mr="10px"></Image>
+      <Image ref={btnRef} onClick={onToggle} display="inline" src={ menuIcon.src} alt="logo" boxSize="30px" mr="10px"></Image>
 
       <Drawer
         isOpen={isOpen}
@@ -56,18 +56,13 @@ function NavDrawer() {
         <DrawerContent backgroundColor="rgb(252, 247, 233)">
           <Flex flexDirection="column" justifyContent="center" h="80%" alignItems="center">
             <LinkItem href="/" >
-              <Text fontSize="3xl" m="30px">
-                Home
-              </Text>
-            </LinkItem>
-            <LinkItem href="/wip">
-              <Text fontSize="3xl" m="30px">
-                Portfolio
-              </Text>
-            </LinkItem>
-            <LinkItem href="/wip">
-              <Text fontSize="3xl" m="30px">
+              <Text onClick={() => onClose()} fontSize="3xl" m="30px">
                 About
+              </Text>
+            </LinkItem>
+            <LinkItem href="/projects" onClick={onClose}>
+              <Text onClick={() => onClose()} fontSize="3xl" m="30px">
+                Portfolio
               </Text>
             </LinkItem>
           </Flex>
@@ -123,8 +118,9 @@ function Navbar(props) {
         <Image display="inline" src={ logo.src} alt="logo" height="40px" width="50px" mr="10px"></Image>
         {matches &&
         <Heading
-        fontFamily="VarelaRound"
+        fontFamily="Montserrat"
         fontSize="2xl"
+        letterSpacing="tight"
         m="0px">
           Stephen Choo
         </Heading>
@@ -157,13 +153,10 @@ function Navbar(props) {
         flexGrow={1}
         >
           <LinkItem href="/" path={path} >
-            Home
-          </LinkItem>
-          <LinkItem href="/wip" path={path} >
-            Portfolio
-          </LinkItem>
-          <LinkItem href="/wip" path={path} >
             About
+          </LinkItem>
+          <LinkItem href="/projects" path={path} >
+            Portfolio
           </LinkItem>
         </Stack>) }
 
