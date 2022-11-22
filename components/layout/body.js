@@ -26,7 +26,7 @@ function Body({ children }) {
       wrap="wrap"
       align="center"
       justifyContent="space-between"
-      maxW="70ch"
+      maxW="100ch"
       >
         {children}
       </Container>

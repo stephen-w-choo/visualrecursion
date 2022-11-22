@@ -71,8 +71,8 @@ export default function Home() {
 
   return (
     <Body>
-      <main className={styles.main}>
-        <Flex mt="130px" alignItems="center" justifyContent="center">
+      <Flex justifyContent="center" alignItems="center" margin="0 auto" flexDirection="column" flex="1" p="4" minH="80vh" maxW="70ch">
+        <Flex mt="200px" alignItems="center" justifyContent="center">
           <Box>
             <Heading size="lg" mr="40px" fontFamily="VarelaRound" fontWeight="700">
                 Hi, I&apos;m Stephen
@@ -83,14 +83,10 @@ export default function Home() {
         <br></br>
         <Box
           p='10px'
-          mt='4'
           bg='rgba(240, 232, 205)'
-          // border='40px'
-          // borderColor='#306998'
           rounded='md'
           shadow='md'
           textAlign='left'
-          mb="20px"
           >
           <Text fontSize="lg">
             I&apos;m an aspiring developer who enjoys  <Link
@@ -259,7 +255,7 @@ export default function Home() {
             <Image src={ linkedinLogo.src} alt="linkedin icon" boxSize='40px' m="20px"></Image>
           </Link>
         </Flex>
-      </main>
+      </Flex>
     </Body>
   )
 }

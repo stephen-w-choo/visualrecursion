@@ -2,7 +2,7 @@
 import React from 'react'
 import LinkItem from '../linkitem'
 import { motion } from 'framer-motion'
-import logo from '../../images/logos/websiteLogo.png'
+import logo from '../../images/logos/websiteLogoHex.png'
 import menuIcon from '../../images/menu-icon.svg'
 
 import {
@@ -107,7 +107,7 @@ function Navbar(props) {
     >
       <Container // Chakra container, defaults to a maxWidth of 60ch
       display="flex"
-      p="2"
+      p="1"
       wrap="wrap"
       align="center"
       justifyContent="space-between"
@@ -120,8 +120,15 @@ function Navbar(props) {
       width="100%"
       alignItems="center"
       >
-        <Image display="inline" src={ logo.src} alt="logo" boxSize='50px' mr="10px"></Image>
-        <Heading fontFamily="VarelaRound" fontSize="2xl">Stephen Choo</Heading>
+        <Image display="inline" src={ logo.src} alt="logo" height="40px" width="50px" mr="10px"></Image>
+        {matches &&
+        <Heading
+        fontFamily="VarelaRound"
+        fontSize="2xl"
+        m="0px">
+          Stephen Choo
+        </Heading>
+        }
           {/* <Flex justify="center" alignItems="center" m="0px"> */}
             {/* <motion.div
               initial={{ opacity: 0 }}
@@ -148,7 +155,6 @@ function Navbar(props) {
         alignItems="center"
         justifyContent="flex-end"
         flexGrow={1}
-        mt='0'
         >
           <LinkItem href="/" path={path} >
             Home
