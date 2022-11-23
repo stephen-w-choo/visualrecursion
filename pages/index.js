@@ -1,23 +1,20 @@
-import Head from 'next/head'
-import React, { useState } from 'react'
-import styles from '../styles/Home.module.css'
+import Body from '../components/layout/body'
+import HighlightText from '../components/highlighttext'
+import SectionHeader from '../components/sectionheader'
+import React from 'react'
 import profilePicture from '../images/cat_profile.jpg'
 import pythonLogo from '../images/python-logo.svg'
 import jsLogo from '../images/js-logo.svg'
-import railsLogo from '../images/rails-logo.svg'
 import rubyLogo from '../images/ruby-logo.svg'
 import ghLogo from '../images/social/github.svg'
 import lcLogo from '../images/social/leetcode.svg'
 import linkedinLogo from '../images/social/linkedin.svg'
 import arrowIcon from '../images/arrow-up.svg'
-import Body from '../components/layout/body'
+
 
 import {
   Box,
-  Button,
   Collapse,
-  Container,
-  Divider,
   Flex,
   Heading,
   Image,
@@ -25,13 +22,7 @@ import {
   Text,
   } from '@chakra-ui/react'
 
-function HighlightText({children}) {
-  return (
-    <Text as="span" fontWeight="bold" bg='rgba(48, 105, 152, 0.2)'>
-      {children}
-    </Text>
-  )
-}
+
 export default function Home() {
   const [ state, setState ] = React.useState({
     initialOpen: true,
@@ -85,7 +76,9 @@ export default function Home() {
           width="100%"
           textAlign="left"
           >
-          <Heading fontFamily="MontserratBold" fontSize="md" mb="10px"> ABOUT <Divider borderColor="blackAlpha.500" /></Heading>
+          <SectionHeader>
+            ABOUT
+          </SectionHeader>
           <Text fontSize="lg">
             I&apos;m an aspiring developer who enjoys  <Link
             href="http://www.playingwithchaos.net/"
@@ -109,7 +102,9 @@ export default function Home() {
           textAlign="left"
           width="100%"
         >
-          <Heading fontFamily="MontserratBold" fontSize="md" mb="10px"> SKILLS <Divider borderColor="blackAlpha.500" /></Heading>
+          <SectionHeader>
+            SKILLS
+          </SectionHeader>
           <Text fontSize="xl">
             I use <Link
               color='rgba(48, 105, 152)'
@@ -149,8 +144,11 @@ export default function Home() {
           </Text>
         </Box>
         <Collapse in={state.initialOpen} animateOpacity={true}>
-        <Box mb="50px">
-          <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline'></Image> <Text as="span" fontWeight="600" fontSize="lg">Click to see more.</Text>
+        <Box mt="20px" mb="50px">
+          <Image src={ arrowIcon.src} alt="arrow icon" boxSize='20px' display='inline' />
+          <Text as="span" fontWeight="600" fontSize="lg">
+            Click to see more.
+          </Text>
         </Box>
         </Collapse>
         <Collapse in={state.pythonOpen} animateOpacity={true} >
@@ -158,8 +156,6 @@ export default function Home() {
             p='10px'
             mt='4'
             bg='rgba(48, 105, 152, 0.1)'
-            // border='40px'
-            // borderColor='#306998'
             rounded='md'
             shadow='md'
             textAlign='left'
@@ -251,8 +247,6 @@ export default function Home() {
           </Box>
         </Collapse>
         <br></br>
-        <p className={styles.description} >
-        </p>
         <Heading fontSize="lg">Find me on: </Heading>
         <Flex justifyContent="center">
           <Link href="https://leetcode.com/stephen-w-choo/">
