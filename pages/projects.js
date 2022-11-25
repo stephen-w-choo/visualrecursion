@@ -40,7 +40,7 @@ export default function Home() {
           <GridItem
           image={MarkovTwitterIcon.src}
           title="Twitter Caricatures"
-          description="A web app that generates fake tweets using Markov chaining. My first foray into NLP, although the libary is doing most of the heavy lifting for me."
+          description="A web app that generates fake tweets using Markov chaining. My first foray into NLP, although the library is doing most of the heavy lifting for me."
           github="https://github.com/stephen-w-choo/markov-twitter"
           website="https://markovtwitter.com/"
           tags={["Python", "Flask", "React", "AWS"]}
@@ -65,8 +65,8 @@ export default function Home() {
             image={EYChallengeIcon.src}
             title="EY Better Working World Challenge"
             description="A data science challenge - one that I was not particularly succcessful in."
-            github="https://github.com/stephen-w-choo/google-foobar-solutions"
-            website="https://foobar.withgoogle.com/"
+            github="https://github.com/stephen-w-choo/2022-Better-Working-World-Data-Challenge"
+            website="https://www.ey.com/en_au/careers/data-science-challenge"
             tags={["Python", "Jupyter Notebook", "Azure"]} />
         </Flex>
         <SectionHeader fontSize="xl">
@@ -81,7 +81,7 @@ export default function Home() {
             image={VisualRecursionIcon.src}
             title="Visual Recursion"
             description="You're looking at it: my portfolio and eventual fractal arts showcase."
-            github="https://github.com/stephen-w-choo/markov-twitter"
+            github="https://github.com/stephen-w-choo/visualrecursion"
             tags={["React", "Next", "ChakraJS", "framer-motion", "AWS"]} />
           <GridItem
             image={ZoomAvoiderIcon.src}

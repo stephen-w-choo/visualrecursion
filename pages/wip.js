@@ -76,7 +76,8 @@ export default function wip() {
             Dental First Aid
           </Link>
         </ListItem>
-          <Text> A website that teaches you how to deal with dental emergencies. An older project to practice plain HTML/CSS/Javascript</Text>
+          <Text> A website that teaches you how to deal with dental emergencies. 
+            An older project to practice plain HTML/CSS/Javascript</Text>
           <Text> Made with: Pico.CSS, vanilla JS, webpack </Text>
           <Text> Links: <Link href="https://stephen-w-choo.github.io/dental-first-aid/" fontWeight="bold">Website</Link>,
           <Link href="https://github.com/stephen-w-choo/dental-first-aid" fontWeight="bold">Github</Link>
